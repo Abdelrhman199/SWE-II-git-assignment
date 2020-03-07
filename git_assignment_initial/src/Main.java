@@ -8,7 +8,10 @@ public class Main {
 			new SphereArea(),
 			new Fibonacci(),
 			new ballVolume(),
-			new SummtionSeries()
+			new SummtionSeries(),
+			new CircleArea(),
+			new MultiplicationSeries()
+
 	};
 	public static void main(String[] args) {
 		Topic mathTopic = new Topic();
