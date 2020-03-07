@@ -1,0 +1,40 @@
+import java.util.*;
+class lucas2
+{
+  public static void main(String[]args)
+  {
+    Scanner scan = new Scanner(System.in);
+    int first = 2;
+    int second = 1;
+    int temp = 0;
+    System.out.print("Enter the number of terms you want to print: ");
+    int number = scan.nextInt();
+    int []arr = new int[number];
+    
+    if(number == 1)
+    {
+      System.out.println(2);
+      System.exit(0);
+    }
+else if(number == 2)
+    {
+      System.out.println("2,1");
+      System.exit(0);
+    }
+    arr[0] = 2;
+    arr[1] = 1;
+    for(int i = 2; i < number; i++)
+    {
+      temp = first + second;
+      arr[i] = temp;
+      first = second;
+      second = temp;      
+    }
+    System.out.print("The Lucas Series is: ");
+    for(int i = 0; i < number; i++)
+    {
+      System.out.print(arr[i]+",");
+    }
+  }
+}
+
